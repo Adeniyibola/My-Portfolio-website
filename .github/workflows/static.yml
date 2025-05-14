@@ -1,0 +1,50 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Download, ExternalLink } from "lucide-react";
+
+export default function Portfolio() {
+  return (
+    <div className="p-6 max-w-4xl mx-auto space-y-8">
+      <header className="space-y-2">
+        <h1 className="text-4xl font-bold">Adeniyi Mubarakat Bolanle</h1>
+        <p className="text-lg text-gray-600">Product Manager | Ex-Teacher | UX Enthusiast</p>
+      </header>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold">About Me</h2>
+        <p>
+          I’m transitioning into product management after several years of experience in education and logistics. I’ve completed hands-on projects including PRD writing and UX design using Figma. I’m passionate about building digital products that solve everyday problems.
+        </p>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold">Project: Chowdeck PRD</h2>
+        <Card>
+          <CardContent className="space-y-4 p-4">
+            <p>
+              Chowdeck is a food delivery app that connects users to nearby vendors and ensures timely delivery. This PRD outlines the features, user stories, and improvement suggestions based on real market problems.
+            </p>
+            <div className="flex gap-4">
+              <Button asChild>
+                <a href="https://www.figma.com/board/IvVP1pMUSCZNvQoYU6fPPV/USER-FLOW-CHOWDECK" target="_blank">
+                  <ExternalLink className="mr-2 h-4 w-4" /> View Figma User Flow
+                </a>
+              </Button>
+              <Button variant="outline" asChild>
+                <a href="/chowdeck-prd.pdf" download>
+                  <Download className="mr-2 h-4 w-4" /> Download PRD (PDF)
+                </a>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="space-y-2">
+        <h2 className="text-2xl font-semibold">Contact</h2>
+        <p>Email: adeniyimubarakat98gmail.com</p>
+        <p>LinkedIn: linkedin.com/in/mubarakat-adeniyi</p>
+      </section>
+    </div>
+  );
+}
